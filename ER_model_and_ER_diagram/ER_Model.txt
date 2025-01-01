@@ -1,0 +1,25 @@
+
+
+entities and attributes:
+
+SodaShop:
+    - ShopID (PK, NOT NULL)
+    - ShopName (Varchar, NOT NULL)
+    - StorageID (FK, NOT NULL)
+    - AddressID (FK, NOT NULL)
+
+Storage:
+    - StorageID (PK, NOT NULL)
+
+Company:
+    - CompanyID (PK, NOT NULL)
+
+Soda:
+    - SodaID (PK, NOT NULL)
+
+Address:
+    - AddressID (PK, NOT NULL)
+
+SalesReport:
+    - SalesReportID (PK, NOT NULL)
+
