@@ -4,7 +4,7 @@ using Models;
 public class AppDbConext : DbContext{
 
     public DbSet<Company> Companies { get; set; }
-    
+    public DbSet<Soda> Sodas { get; set; }
 
 
 

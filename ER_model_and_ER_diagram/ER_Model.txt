@@ -10,16 +10,59 @@ SodaShop:
 
 Storage:
     - StorageID (PK, NOT NULL)
+    - ShopID (Fk, NOT NULL)
+    - Capacity (Int, NOT NULL)
 
 Company:
     - CompanyID (PK, NOT NULL)
+    - AddressID (FK, NOT NULL)
+    - CompanyName (Varchar, NOT NULL)
+    - ContactInfo (Varchar, NOT NULL)
 
 Soda:
     - SodaID (PK, NOT NULL)
+    - CompanyID (FK, NOT NULL)
+    - SodaName (Varchar, NOT NULL)
+    - Price (Int, NOT NULL)
+    - Availability (Enum, NOT NULL)
+
+StorageSoda:
+    - StorageSodaID (PK, NOT NULL)
+    - StorageID (FK, NOT NULL)
+    - SodaID (FK, NOT NULL)
+    - Quantity (Int, NOT NULL)
 
 Address:
     - AddressID (PK, NOT NULL)
+    - AddressName (Varchar, NOT NULL)
+    - PostalCode (Varchar, NOT NULL)
 
 SalesReport:
     - SalesReportID (PK, NOT NULL)
+    - ShopID (FK, NOT NULL)
+    - Date (DATE, NOT NULL)
+    - TotalSales (Int, NOT NULL)
+----------------------------------------------------------------
 
+Relationships
+
+SodaShop ↔ Storage:
+
+1-to-1: Each soda shop has one storage unit.
+Relationship: SodaShop (ShopID) ↔ Storage (ShopID).
+Storage ↔ Soda:
+
+Many-to-Many: Each storage unit can store multiple sodas, and each soda can be stored in multiple storage units.
+Modeled via StorageSoda.
+Soda ↔ Company:
+
+Many-to-1: Each soda is produced by one company, but a company can produce many sodas.
+SodaShop ↔ Address:
+
+1-to-1: Each shop has one address.
+Company ↔ Address:
+
+1-to-1: Each company has one address.
+SalesReport ↔ SodaShop:
+
+Many-to-1: Each sales report belongs to one shop, but a shop can have many sales reports over time.

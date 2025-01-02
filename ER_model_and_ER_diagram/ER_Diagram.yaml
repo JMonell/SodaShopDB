@@ -1,0 +1,33 @@
+# +------------------+      +------------------+
+# | SodaShop         |      | Address          |
+# |------------------|      |------------------|
+# | PK: ShopID       |      | PK: AddressID    |
+# | ShopName         |      | AddressName      |
+# | FK: StorageID    |      | PostalCode       |
+# | FK: AddressID    |      +------------------+
+# +------------------+
+#        | 1
+#        | 
+#        | 
+#        v
+# +------------------+      +------------------+      +------------------+
+# | Storage          |<---->| Soda            |<---->| Company          |
+# |------------------|      |------------------|      |------------------|
+# | PK: StorageID    |      | PK: SodaID      |      | PK: CompanyID    |
+# | FK: ShopID       |      | SodaName        |      | CompanyName      |
+# | Capacity         |      | Price           |      | FK: AddressID    |
+# +------------------+      | FK: CompanyID   |      | ContactInfo      |
+#        |                  | Availability    |      +------------------+
+#        |                  +------------------+
+#        | 1
+#        | 
+#        |
+#        v
+# +---------------------+
+# | StorageSoda         |
+# |---------------------|
+# | PK: StorageSodaID   |
+# | FK: StorageID       |
+# | FK: SodaID          |
+# | Quantity            |
+# +---------------------+
