@@ -17,7 +17,8 @@ Company:
     - CompanyID (PK, NOT NULL)
     - AddressID (FK, NOT NULL)
     - CompanyName (Varchar, NOT NULL)
-    - ContactInfo (Varchar, NOT NULL)
+    - ContactPhonr (Varchar, NOT NULL)
+    - Contactmail (Varchar, NOT NULL)
 
 Soda:
     - SodaID (PK, NOT NULL)
