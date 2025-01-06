@@ -5,7 +5,7 @@ using Microsoft.Identity.Client.Extensions.Msal;
 public class SodaShop{
 
     public int Id { get; set; }
-    public string ShopName { get; set; }
+    public required string ShopName { get; set; }
     
     [ForeignKey("Storage")]
     public int StorageId { get; set; }

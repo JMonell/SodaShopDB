@@ -5,7 +5,11 @@ public class AppDbConext : DbContext{
 
     public DbSet<Company> Companies { get; set; }
     public DbSet<Soda> Sodas { get; set; }
-
+    public DbSet<Storage> Storages { get; set; }
+    public DbSet<SodaShop> SodaShops { get; set; }
+    public DbSet<SalesReport> SalesReports { get; set; }
+    public DbSet<Address> Addresses { get; set; }
+    public DbSet<StorageSoda> StorageSoda { get; set;}
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){

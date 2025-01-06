@@ -9,7 +9,7 @@ public enum Availability{
 public class Soda{
 
     public int Id { get; set; }
-    public string SodaName { get; set; }
+    public required string SodaName { get; set; }
     public int Price { get; set; }
     public required Availability Availability { get; set; }
     

@@ -31,7 +31,6 @@ StorageSoda:
     - StorageSodaID (PK, NOT NULL)
     - StorageID (FK, NOT NULL)
     - SodaID (FK, NOT NULL)
-    - Quantity (Int, NOT NULL)
 
 Address:
     - AddressID (PK, NOT NULL)
