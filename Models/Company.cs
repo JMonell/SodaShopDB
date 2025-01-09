@@ -13,5 +13,6 @@ public class Company{
     [ForeignKey("Address")]
     public int AddressId { get; set; }
     public required Address Address{ get; set; }
+    public ICollection<SalesReport>? SalesReports { get; set; }
 
 }
